@@ -20,14 +20,13 @@ A responsive web application for managing browser extensions. This project focus
 
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/fraufer/your-repo-name.git](https://github.com/fraufer/your-repo-name.git)
+   git clone [https://github.com/fraufer/browser-extensions-manager.git](https://github.com/fraufer/browser-extensions-manager.git)
    ```
 
 2. Open index.html in your browser.
    If using VS Code, I recommend the Live Server extension to ensure the JSON data loads correctly.
 
-🔗 Live Demo
-[Add your link here]
+🔗 [Live Demo](https://browser-extensions-manager-opal.vercel.app/)
 
-Challenge by Frontend Mentor
-Coded by kyraqd
+Challenge by [Frontend Mentor](https://www.frontendmentor.io/challenges/browser-extension-manager-ui-yNZnOfsMAp)
+Coded by [kyraqd](https://github.com/fraufer)
