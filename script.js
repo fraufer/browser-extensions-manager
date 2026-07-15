@@ -50,7 +50,7 @@ function renderExtensions(extensions){
             </div>
           </div>
           <div class="bottom">
-            <button class="remove">Remove</button>
+            <button class="remove" type="button">Remove</button>
             <div class="toggle">
               <label class="toggle-label">
                 <input type="checkbox" class="toggle-input" aria-label="Toggle extension">
