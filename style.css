@@ -1,0 +1,362 @@
+:root{
+    --neutral-900: hsl(227, 75%, 14%);
+    --neutral-800: hsl(226, 25%, 17%);
+    --neutral-700: hsl(225, 23%, 24%);
+    --neutral-600: hsl(226, 11%, 37%);
+    --neutral-300: hsl(0, 0%, 78%);
+    --neutral-200: hsl(217, 61%, 90%);
+    --neutral-100: hsl(0, 0%, 93%);
+    --neutral-0: hsl(200, 60%, 99%);
+
+    --red-400 : hsl(3, 86%, 64%);
+    --red-500 : hsl(3, 71%, 56%);
+    --red-700 : hsl(3, 77%, 44%);
+
+    --light-gradient : linear-gradient(180deg, #EBF2FC 0%, #EEF8F9 100%);
+    --dark-gradient : linear-gradient(180deg, #040918 0%, #091540 100%);
+
+    --gradient : var(--light-gradient);
+    --bg-card : var(--neutral-0);
+    --primary-text-color: var(--neutral-900);
+    --secondary-text-color: var(--neutral-600);
+    --reverse-text-color: var(--neutral-0);
+    --border-color: var(--neutral-300);
+    --icon-color : var(--neutral-100);
+
+    --toggle-bg-off : var(--neutral-300);
+    --toggle-bg-on : var(--red-700);
+
+    --remove-hover-color : var(--red-700);
+    --toggle-on-hover-color: var(--red-500);
+    --toggle-off-hover-color: var(--neutral-600);
+    --active-filters-hover-color : var(--red-500);
+    --nonactive-filters-hover-color : var(--neutral-100);
+    --theme-hover-color : var(--neutral-300);
+}
+
+[data-theme='dark']{
+    --gradient : var(--dark-gradient);
+    --bg-card : var(--neutral-800);
+    --primary-text-color: var(--neutral-0);
+    --secondary-text-color: var(--neutral-100);
+    --reverse-text-color: var(--neutral-900);
+    --border-color : var(--neutral-700);
+    --icon-color : var(--neutral-700);
+
+    --toggle-bg-off : var(--neutral-600);
+    --toggle-bg-on : var(--red-500);
+    
+    --remove-hover-color : var(--red-400);
+    --toggle-on-hover-color: var(--red-700);
+    --toggle-off-hover-color: var(--neutral-700);
+    --active-filters-hover-color : var(--red-400);
+    --nonactive-filters-hover-color : var(--neutral-600);
+    --theme-hover-color : var(--neutral-600);
+}
+
+@font-face {
+    font-family: "NotoSans";
+    src: url(assets/fonts/NotoSans-VariableFont_wdth\,wght.ttf),
+}
+@font-face {
+    font-family: "NotoSans Italic";
+    src: url(assets/fonts/NotoSans-Italic-VariableFont_wdth\,wght.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "NotoSans", sans;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background: var(--gradient);
+    padding: 36px 24px;
+}
+
+.container{
+    max-width: 1200px;
+}
+
+header{
+    background-color: var(--bg-card);
+    width: 100%;
+    padding: 8px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    border: 1px solid var(--border-color);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 10px;
+}
+
+header button{
+    background-color: var(--icon-color);
+    border: none;
+    padding: 8px;
+    border-radius: 12px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    place-items: center; 
+    cursor: pointer;
+}
+
+main{
+    min-height: 75vh;
+}
+
+.main-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.main-header h1{
+    margin-bottom: 12px;
+    font-size: 36px;
+    color: var(--primary-text-color);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.filters button{
+    padding: 8px 16px;
+    border-radius: 20px;
+    margin-right: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    background-color: var(--bg-card);
+    color: var(--primary-text-color);
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+}
+
+.filters button.active{
+    background-color: var(--red-700);
+    color: var(--neutral-100);
+    border-color: var(--red-700);
+}
+
+.extensions{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+}
+
+article{
+    border: 1px solid var(--border-color);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 10px;
+    padding: 16px;
+    border-radius: 12px;
+    background-color: var(--bg-card);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.top{
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+.top h3{
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--primary-text-color);
+    margin-bottom: 10px;
+}
+.top p{
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--secondary-text-color);
+}
+.top img{
+    margin-right: 10px;
+}
+
+.bottom{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.bottom button{
+    padding: 8px 12px;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--primary-text-color);
+    cursor: pointer;
+}
+
+.toggle{
+    position: relative;
+    display: inline-block;
+    width: 45px;
+    height: 24px;
+    cursor: pointer;
+}
+
+.toggle-input{
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle-slider{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--toggle-bg-off);
+    border-radius: 34px;
+}
+
+.toggle-slider::before{
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 4px;
+    bottom: 4px;
+    background-color: var(--neutral-0);
+    border-radius: 50%;
+    transition: transform 0.4s ease;
+}
+
+.toggle-input:checked + .toggle-slider{
+    background-color: var(--toggle-bg-on);
+}
+
+.toggle-input:checked + .toggle-slider::before{
+    transform: translateX(21px);
+}
+
+.remove:hover{
+    background-color: var(--remove-hover-color);
+    color: var(--reverse-text-color);
+}
+.theme-btn:hover{
+    background-color: var(--theme-hover-color);
+}
+.filters button.active:hover{
+    background-color: var(--active-filters-hover-color);
+}
+.filters button:hover{
+    background-color: var(--nonactive-filters-hover-color);
+}
+.toggle-slider:hover{
+    background-color: var(--toggle-off-hover-color);
+}
+.toggle-input:checked + .toggle-slider:hover{
+    background-color: var(--toggle-on-hover-color);
+}
+
+.remove:focus{
+    background-color: var(--remove-hover-color);
+    color: var(--reverse-text-color);
+}
+.theme-btn:focus{
+    background-color: var(--theme-hover-color);
+}
+.filters button.active:focus{
+    background-color: var(--active-filters-hover-color);
+}
+.filters button:focus{
+    background-color: var(--nonactive-filters-hover-color);
+}
+.toggle-slider:focus{
+    background-color: var(--toggle-off-hover-color);
+}
+.toggle-input:checked + .toggle-slider:focus{
+    background-color: var(--toggle-on-hover-color);
+}
+
+button:focus, 
+.toggle-input:focus + .toggle-slider {
+    outline: none;
+}
+
+button:focus-visible, 
+.toggle-input:focus-visible + .toggle-slider {
+    outline: 2px solid var(--red-400);
+    outline-offset: 2px;
+}
+
+.remove:hover, .remove:focus-visible {
+    background-color: var(--remove-hover-color);
+    color: var(--reverse-text-color);
+}
+
+.theme-btn:hover, .theme-btn:focus-visible {
+    background-color: var(--theme-hover-color);
+}
+
+.filters button.active:hover, .filters button.active:focus-visible {
+    background-color: var(--active-filters-hover-color);
+}
+
+.filters button:not(.active):hover, .filters button:not(.active):focus-visible {
+    background-color: var(--nonactive-filters-hover-color);
+}
+
+.toggle-slider:hover, .toggle-input:focus-visible + .toggle-slider {
+    background-color: var(--toggle-off-hover-color);
+}
+
+.toggle-input:checked + .toggle-slider:hover, 
+.toggle-input:checked:focus-visible + .toggle-slider {
+    background-color: var(--toggle-on-hover-color);
+}
+
+@media (min-width: 768px){
+    .extensions{
+        grid-template-columns: 1fr 1fr;
+    }
+    .main-header{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+@media (min-width: 1024px){
+    .extensions{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.attribution { font-size: 0.6875rem; text-align: center; margin-top: 50px; color: var(--primary-text-color)}
+.attribution a { color: hsl(228, 45%, 44%); }

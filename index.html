@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <title>Frontend Mentor | Browser extensions manager UI</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <img src="assets/images/logo.svg" alt="Logo" class="logo" width="179" height="41">
+      <button id="theme-btn" class="theme-btn"aria-label="Change color theme">
+        <img src="assets/images/icon-moon.svg" alt="" id="theme-img" width="22" height="22">
+      </button>
+    </header>
+    <main>
+      <section class="main-header">
+        <h1>Extensions List</h1>
+        <h2 class="sr-only">Filter by status</h2>
+        <div class="filters">
+          <button class="active">All</button>
+          <button class="">Active</button>
+          <button class="">Inactive</button>
+        </div>
+      </section>
+      <section class="extensions" id="extensions">
+        <!-- <article>
+          <div class="top">
+            <img src="assets/images/logo-devlens.svg" alt="DevLens Logo">
+            <div class="top-text">
+              <h3>DevLens</h3>
+              <p>Quickly inspect page layouts and visualize element boundaries.</p>
+            </div>
+          </div>
+          <div class="bottom">
+            <button>Remove</button>
+            <div class="toggle">
+              <label class="toggle-label">
+                <input type="checkbox" class="toggle-input">
+                <span class="toggle-slider"></span>
+              </label>
+
+              <label class="toggle-label">
+                <input type="checkbox" class="toggle-input">
+                <span class="toggle-slider"></span>
+              </label>
+            </div>
+          </div>
+        </article> -->
+      </section>
+    </main>
+
+    <footer class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
+      Coded by <a href="https://github.com/fraufer">kyraqd</a>.
+    </footer>
+
+  </div>
+</body>
+</html>
