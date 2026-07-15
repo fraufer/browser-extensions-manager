@@ -67,7 +67,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "NotoSans", sans;
+    font-family: "NotoSans", sans-serif;
 }
 
 body{
@@ -347,7 +347,11 @@ button:focus-visible,
     }
 }
 
-
+@media (prefers-reduced-motion: reduce){
+    *{
+        transition: none !important;
+    }
+}
 
 
 
